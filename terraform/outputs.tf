@@ -1,0 +1,10 @@
+output "vpc_id"              { value = aws_vpc.main.id }
+output "alb_dns_name"        { value = aws_lb.main.dns_name }
+output "alb_zone_id"         { value = aws_lb.main.zone_id }
+output "ecr_repository_url"  { value = aws_ecr_repository.app.repository_url }
+output "ecs_cluster_name"    { value = aws_ecs_cluster.main.name }
+output "ecs_service_name"    { value = aws_ecs_service.app.name }
+output "aurora_endpoint"     { value = aws_rds_cluster.main.endpoint }
+output "aurora_reader_endpoint" { value = aws_rds_cluster.main.reader_endpoint }
+output "db_secret_arn"       { value = aws_secretsmanager_secret.db.arn }
+output "sns_alert_topic_arn" { value = aws_sns_topic.alerts.arn }
